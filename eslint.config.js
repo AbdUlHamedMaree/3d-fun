@@ -4,6 +4,8 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
+import eslintPluginJestDom from 'eslint-plugin-jest-dom';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -23,5 +25,7 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
+  eslintPluginTestingLibrary.configs['flat/react'],
+  eslintPluginJestDom.configs['flat/recommended'],
   eslintPluginPrettierRecommended
 );
