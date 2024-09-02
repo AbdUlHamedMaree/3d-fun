@@ -1,7 +1,8 @@
 import { GlobalRegistrator } from '@happy-dom/global-registrator';
 
-import { expect } from 'bun:test';
+import { expect, afterEach } from 'bun:test';
 import * as matchers from '@testing-library/jest-dom/matchers';
+import { cleanup } from '@testing-library/react';
 
 GlobalRegistrator.register();
 
@@ -12,3 +13,5 @@ declare module 'bun:test' {
     extends MatchersBuiltin<T>,
       matchers.TestingLibraryMatchers<ReturnType<typeof expect.stringContaining>, T> {}
 }
+
+afterEach(cleanup);
