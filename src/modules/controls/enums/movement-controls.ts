@@ -1,6 +1,6 @@
 export enum MovementControlsEnum {
   forward = 'forward',
-  back = 'back',
+  backward = 'backward',
   left = 'left',
   right = 'right',
   break = 'break',
