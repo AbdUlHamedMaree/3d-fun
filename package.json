@@ -16,6 +16,8 @@
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.111.5",
     "@react-three/fiber": "^8.17.6",
+    "cannon-es": "^0.20.0",
+    "cannon-es-debugger": "^1.0.0",
     "framer-motion": "^11.3.31",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -6,8 +6,11 @@ type MovementsKeyboardControlsProps = Omit<
   'map'
 >;
 
-export const MovementsKeyboardControls: React.FC<
-  MovementsKeyboardControlsProps
-> = props => (
-  <KeyboardControls map={movementKeyboardControlsMap} {...props}></KeyboardControls>
+export const MovementsKeyboardControls: React.FC<MovementsKeyboardControlsProps> = ({
+  children,
+  ...props
+}) => (
+  <KeyboardControls map={movementKeyboardControlsMap} {...props}>
+    {children}
+  </KeyboardControls>
 );

@@ -1,4 +1,3 @@
-import TheCar from './car/theCar';
-export const App = () => {
-  return <TheCar />;
-};
+import { MainScene } from '$components/scene';
+
+export const App = () => <MainScene />;
